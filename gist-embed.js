@@ -37,7 +37,7 @@ $(function(){
 				}
 			});	
 		}else{
-			$elem.html("Failed loading gist with incorrect id format: "+id);
+			$elem.html("Failed loading gist with incorrect id format: "+$elem.attr("id"));
 		}
 	});
 });
