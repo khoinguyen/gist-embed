@@ -25,6 +25,7 @@ $(function(){
 			$.ajax({ 
 				url: "https://gist.github.com/"+id+".json", 
 				dataType: "jsonp", 
+				timeout:10000,
 				success: function(response){
 					//the html payload is in the div property
 					if(response && response.div){
@@ -33,7 +34,7 @@ $(function(){
 					}
 				},
 				error: function(){
-					$elem.html("Failed loading gist "+url+" ...");
+					$elem.html("Failed loading gist "+url);
 				}
 			});	
 		}else{
