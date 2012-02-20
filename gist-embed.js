@@ -3,7 +3,7 @@
 $(function(){
 	var gistMarkerId = "gist-";
 	
-	//find all elements with gistEmbed class
+	//find all code elements
 	$("code").each(function(){
 		var $elem, id, url;
 		$elem = $(this);
