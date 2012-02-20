@@ -1,6 +1,6 @@
 $(function(){
 	//find all elements with gistEmbed class
-	$(".gistEmbed").each(function(){
+	$(".gist-embed").each(function(){
 		var $elem, id;
 		$elem = $(this);
 		id = $elem.attr("id");
