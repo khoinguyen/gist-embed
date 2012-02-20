@@ -1,3 +1,5 @@
+//author: Blair Vanderhoof
+//https://github.com/blairvanderhoof/gist-embed
 $(function(){
 	//find all elements with gistEmbed class
 	$(".gist-embed").each(function(){
