@@ -12,8 +12,8 @@
 
     <script type="text/javascript" src="gist-embed.js"></script>
 
-### All you need to do to embed a gist is to add a placeholder div with class "gist-embed".  The id of the div should be in this format:
+### All you need to do to embed a gist is to add a placeholder code element with id attribute in this format:
 
     "gist-<gist-id>"
 	e.g.:
-    <div id="gist-1741" class="gist-embed"></div>
+    <code id="gist-1741"></code>

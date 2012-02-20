@@ -1,14 +1,16 @@
 //author: Blair Vanderhoof
 //https://github.com/blairvanderhoof/gist-embed
 $(function(){
+	var gistMarkerId = "gist-";
+	
 	//find all elements with gistEmbed class
-	$(".gist-embed").each(function(){
+	$("code").each(function(){
 		var $elem, id;
 		$elem = $(this);
 		id = $elem.attr("id");
 		id = id || "";
 		//get the numeric id from the id attribute of the element holder
-		id = id.replace("gist-","");
+		id = id.substr(0,gistMarkerId.length) === gistMarkerId ? id.replace(gistMarkerId,"") : null;
 
 		//make sure result is a numeric id
 		if(!isNaN(parseInt(id,10))){
