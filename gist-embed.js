@@ -12,7 +12,10 @@ $(function(){
 		$elem.css("display","block");
 		
 		id = $elem.attr("id");
-		id = id || "";
+                
+                if (!id || id == "" || id.indexOf("gist-") != 0) return; // Only works if the code have id start by gist-
+		
+                id = id || "";
 		//get the numeric id from the id attribute of the element holder
 		id = id.substr(0,gistMarkerId.length) === gistMarkerId ? id.replace(gistMarkerId,"") : null;
 
