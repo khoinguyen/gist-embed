@@ -7,13 +7,12 @@ $(function(){
 	$("code").each(function(){
 		var $elem, id, url;
 		$elem = $(this);
-		
+
+		id = $elem.attr("id");
+                if (!id || id == "" || id.indexOf("gist-") != 0) return; // Only works if the code have id start by gist-
+
 		//make block level so loading text shows properly
 		$elem.css("display","block");
-		
-		id = $elem.attr("id");
-                
-                if (!id || id == "" || id.indexOf("gist-") != 0) return; // Only works if the code have id start by gist-
 		
                 id = id || "";
 		//get the numeric id from the id attribute of the element holder
