@@ -9,12 +9,12 @@ $(function(){
 		$elem = $(this);
 
 		id = $elem.attr("id");
-                if (!id || id == "" || id.indexOf("gist-") != 0) return; // Only works if the code have id start by gist-
+        if (!id || id == "" || id.indexOf("gist-") != 0) return; // Only works if the code have id start by gist-
 
 		//make block level so loading text shows properly
 		$elem.css("display","block");
 		
-                id = id || "";
+        id = id || "";
 		//get the numeric id from the id attribute of the element holder
 		id = id.substr(0,gistMarkerId.length) === gistMarkerId ? id.replace(gistMarkerId,"") : null;
 
